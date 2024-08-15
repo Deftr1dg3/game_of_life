@@ -1,16 +1,16 @@
 
 #include "headers.h"
-#include "/Users/stasusbondevito/Documents/PYTHON/C/Utils/util_headers.h"
+#include "util_headers.h"
 
 void print_live_cell()
 {
-    char cell[] = "\x1b[32m*\x1b[0m";
+    char cell[] = "\x1b[32m1\x1b[0m";
     printf("%s", cell);
 }
 
 void print_dead_cell()
 {
-    char cell[] = "\x1b[30m*\x1b[0m";
+    char cell[] = "\x1b[30m0\x1b[0m";
     printf("%s", cell);
 }
 

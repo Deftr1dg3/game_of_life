@@ -1,6 +1,6 @@
 
 #include "headers.h"
-#include "/Users/stasusbondevito/Documents/PYTHON/C/Utils/util_headers.h"
+#include "util_headers.h"
 
 int **create_field(int rows, int cols)
 {
@@ -83,13 +83,13 @@ int get_neighbors(int **field, int row, int col, int rows, int cols)
     int ngs;
 
     ngs = 0;
-    for (int r = MAX(0, row - 1); r < MIN(row + 2, rows); r++)
+    for (int r = row - 1; r < row + 2; r++)
     {
-        for (int c = MAX(0, col - 1); c < MIN(col + 2, cols); c++)
+        for (int c = col - 1; c < col + 2; c++)
         {
             if (!(r == row && c == col))
             {
-                ngs += field[r][c];
+                ngs += field[cycle_row(r, rows)][cycle_col(c, cols)];
             }
         }
     }

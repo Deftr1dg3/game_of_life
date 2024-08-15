@@ -1,9 +1,9 @@
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror
-LDFLAGS=-L../../Utils -lutils
+LDFLAGS=-L./lib -lutils
 
 SRC=src
-INC=-Iinclude -I/Users/stasusbondevito/Documents/PYTHON/C/Utils
+INC=-Iinclude
 
 SOURCES=$(wildcard src/*.c)
 OBJECTS=$(SOURCES:.c=.o)
